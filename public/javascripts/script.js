@@ -13,7 +13,7 @@ let timer;
 let flag_x = false;
 let flag_y = false;
 let first = true;
-const address = "http://localhost:8000"
+const address = "https://web-production-0940.up.railway.app"
 
 function drawEventTable() {
     let serverEvents;

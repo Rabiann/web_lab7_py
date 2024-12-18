@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust programming language</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/lab7.css">
+</head>
+<body>
+<div id="work">
+    <div id="controls"><button id="start">Start</button><button id="stop">Stop</button><button id="reload">Reload</button><button id="close">Close</button></div>
+    <div id="anim">
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+    </div>
+</div>
+<table style="width: 100%; height: 100%;">
+    <tr>
+        <td colspan="4" class="header">
+            <div class="header__title">
+                <h2>In Rust we trust!🦀🦀🦀</h2>
+            </div>
+            <img src="images/rust-logo%20(1).png" alt="rust logo" style="float: right;">
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="3" class="side">
+            <ul>
+                <li><a href="index.html">Main🦀</a></li>
+            </ul>
+        </td>
+        <td rowspan="2" colspan="2" class="main">
+            <button id="play">Play</button>
+            <table id="eventTable"></table>
+            <h3>Setting up Rust</h3>
+            <code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code>
+            <hr>
+            <h3>Creating variables</h3>
+            <p>Rust is statically typed language. Type of variable should be inferred in compile type. You can create mutable and immutable variables:</p>
+            <pre><code>
+                    fn main() {
+                        let x: i32 = 1; // create 32-bit integer
+                        let mut y: i128 = 12345; // create mutable variable of 128-bit integer
+                        y = 2; you can put new value inside y
+                        let z = 2; // type will be inferred (by default is i32 even on 64-bit architecture)
+                        let some_str = "my string"; // Honestly, it is not String, it's string slice &str
+                    }
+                </code></pre>
+            <hr>
+            <h3>Functions</h3>
+            <pre><code>
+                    fn add(x: i32, y: i32) -> i32 {
+                        x + y // in Rust you can omit return statement, simply skip ';' at the end of the line
+                    }
+                </code></pre>
+            <hr>
+            <h3>Loop</h3>
+            <pre><code>
+                    fn main() {
+                        loop {
+                            println!("Hello"); // 'loop' describes infinite loop, just like 'while true'
+                        }
+
+                        for i in 0..=10 { // that's a slice representation, just like range(0, 11) in Python
+                            println!("{i}"); // prints numbers from 0 to 10 including
+                        }
+                    }
+                </code></pre>
+            <hr>
+            To be continued...
+        </td>
+        <td class="side1">
+            <h3>What is Rust?</h3>
+            Rust is a systems programming language focused on safety, speed, and concurrency. It was created by Mozilla and first released in 2010. Rust is designed to prevent common programming errors, especially memory-related issues like null pointer dereferencing, buffer overflows, and data races in concurrent programs.
+        </td>
+    </tr>
+    <tr>
+        <td class="side2">
+            <h3>Why Rust is better than C++</h3>
+            Rust is often considered better than C++ for a few reasons:
+            <ol>
+                <li>
+                    Memory Safety: Rust’s ownership system eliminates common memory bugs like null pointers and data races without a garbage collector.
+                </li>
+                <li>
+                    Concurrency: Rust’s strict compile-time checks prevent data races, making concurrent programming safer.
+                </li>
+                <li>
+                    Modern Syntax: Rust’s syntax is more ergonomic and easier to use, reducing developer errors.
+                </li>
+                <li>
+                    Tooling: Rust has excellent tooling, including cargo for package management and rustfmt for automatic code formatting.
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" class="footer">
+            <div class="footer__div">
+                <div class="footer__title">
+                    <h2>🗲blazing fast language</h2>
+                </div>
+                <a href="https://www.rust-lang.org/">Rust official site</a>
+            </div>
+        </td>
+    </tr>
+</table>
+<script src="./javascripts/script.js"></script>
+</body>
+</html>>
